@@ -30,6 +30,43 @@
             <small>Paris, November 2013</small>
           </p>
         </section>
+
+        <section>
+        
+          <section>
+            <h2>Building</h2>
+            <img src="img/building.jpg" style="width: 40%"/>
+          </section>
+        
+          <section>
+            <h2>Building - the goals</h2>
+            <img src="img/GOAL.jpg" style="width: 30%">
+            <pre>
+$ make install-gaia                //Push all the apps for Gaia to the device
+$ APP='app name' make install-gaia //Push only a specific app
+$ make reset-gaia                  //As 'install-gaia' but starts by purging 
+                                     and then sets up permission defaults
+$ make production                  //Emulate user builds</pre>
+          </section>
+          
+          <section>
+            <h2>Building - environment variables</h2>
+            <h4>Usage:</h4>
+            <pre>$ VARIABLE=VALUE make install-gaia</pre>
+            <h4>Variables:</h4>
+            <pre>
+GAIA_OPTIMIZE=1 //Triggers an optimization pass on the JavaScript files
+PRODUCTION=1    //Alias for make production
+DEBUG=1         //Generate a debug profile (apps are not packaged, you can
+                  refresh app in desktop FX)</pre>
+          </section>
+          
+          <section>
+            <h2>Building - shared files</h2>
+            <img src="img/building.jpg" style="width: 40%"/>
+          </section>
+          
+        </section>
         
         <section>
           <h1>Development</h1>
