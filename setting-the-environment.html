@@ -63,8 +63,108 @@
         
         <section>
           <h2>Hacking Gaia</h2>
-          <img src="img/gaia.jpg"/>
-            <small>Gaia is the user interface for Boot to Gecko (B2G); it's a set of Web applications that runs locally on a B2G device, emulator, desktop build, or Firefox build. All you need to know in order to add apps or make changes to Gaia are Web technologies like JavaScript, HTML, and CSS.</small>
+          <h3>Get the Gaia code</h3>
+          <pre>$ git clone https://github.com/mozilla-b2g/gaia.git</pre>
+        </section>
+        
+        <section>
+          <h2>Hacking Gaia</h2>
+          <h3>Run in nightly</h3>
+          <img src="img/nightly.jpg" style="width:60%"/>
+          <pre>
+$ cd /path/to/gaia
+$ DEBUG=1 make
+$ /path/to/firefox/nightly -profile /path/to/profile
+</pre>
+        </section>
+        
+        <section>
+          <section>
+            <h2>Hacking Gaia</h2>
+            <h3>Push to device</h3>
+            <img src="img/device.jpg" style="width:40%"/>
+          </section>
+          
+          <section>
+            <h3>Push to device</h3>
+            <h3>Get ADB</h3>
+            <img src="img/adb.jpg" style="width:40%"/>
+            <pre><a href="http://developer.android.com/tools/help/adb.html">http://developer.android.com/tools/help/adb.html</a></pre>
+          </section>
+          
+          <section>
+            <h2>Hacking Gaia</h2>
+            <h3>Push to device</h3>
+            <pre>$ make install-gaia</pre>
+            <pre>$ make reset-gaia</pre>
+          </section>
+          
+          <section>
+            <h2>Hacking Gaia</h2>
+            <h3>Push one app to device</h3>
+            <pre>$ APP='app name' make install-gaia</pre>
+          </section>
+          
+          <section>
+            <h2>Hacking Gaia</h2>
+            <h3>Fill app with fake data</h3>
+            <pre>$ APP='app name' make reference-workload-light</pre>
+            <pre>$ APP='app name' make reference-workload-medium</pre>
+            <pre>$ APP='app name' make reference-workload-heavy</pre>
+            <pre>$ APP='app name' make reference-workload-x-heavy</pre>
+          </section>
+          
+        </section>
+        
+        <section>
+          <h2>Tools</h2>
+          <h3>adb console</h3>
+          <pre>$ adb logcat | grep GecoConsole</pre>
+        </section>
+        
+        <section>
+
+          <section>
+            <h2>Tools</h2>
+            <h3>APP Manager</h3>
+            <iframe 
+              src="https://www.youtube.com/embed/2S-tpAQ6ap4/?feature=player_detailpage" 
+              frameborder="0" 
+              height="360" 
+              width="640">
+            </iframe>
+         </section>
+         
+         <section>
+           <h2>Tools</h2>
+           <h3>APP Manager</h3>
+           on the device:
+           <pre>Settings > Device information > More information > Developer > Remote Debugging</pre>
+         </section>
+
+         <section>
+           <h2>Tools</h2>
+           <h3>APP Manager</h3>
+           Enable port forwarding:
+           <pre>$ adb forward tcp:6000 localfilesystem:/data/local/debugger-socket</pre>
+         </section>
+         
+         <section>
+           <h2>Tools</h2>
+           <h3>APP Manager</h3>
+           <ul>
+             <li>Connect the device to your computer via USB.</li>
+             <li>Disable Screen lock, by going to <b>Settings > Screen Lock</b> and unchecking the <b>Lock Screen</b> checkbox.</li>
+             <li>Start the <b>App Manager</b> — In <b>Firefox Desktop select the Tools > Web Developer > App Manager</b> menu option, or type <b>about:app-manager</b> in the URL bar.</li>
+           <li>At the bottom of the App Manager tab, you will see a connection status bar (see screenshot below). You should be able to connect to your device by clicking the <b>"Connect to localhost:6000"</b> button.</li>
+         </section>
+         
+        </section>
+        
+        <section>
+          <h1>Setting up </h1>
+          <h1>the environment</h1>
+          <h3><a href="index.html"> << get back to index</a></h3>
         </section>
         
       </div>
