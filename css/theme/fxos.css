@@ -25,6 +25,12 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
+ 
+pre {
+  background-color: #000;
+  padding: 30px !important;
+}
+
 body {
   /*background: darkgreen; url("../../img/green-bg.jpg") no-repeat #1c1e20*/
   background-size: 100%;
